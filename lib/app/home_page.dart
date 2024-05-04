@@ -89,7 +89,7 @@ class _LandingPageState extends State<LandingPage> {
                           Navigator.pushReplacement(
                               context, MaterialPageRoute(builder: (context) => LoginPage())); // Close the dialog
                         },
-                        child: Text("Logout"),
+                        child: Text("Yes LogOut"),
                       ),
                       TextButton(
                         onPressed: () {
