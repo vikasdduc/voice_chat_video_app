@@ -15,11 +15,11 @@ class AppRoutes {
 class AppRouter {
   static Route<dynamic>? onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
-      case AppRoutes.startupPage:
-        return MaterialPageRoute<dynamic>(
-          builder: (_) => StartupPage(),
-          settings: settings,
-        );
+      // case AppRoutes.startupPage:
+      //   return MaterialPageRoute<dynamic>(
+      //     builder: (_) => StartupPage(),
+      //     settings: settings,
+      //   );
 
 
       case AppRoutes.loginPage:

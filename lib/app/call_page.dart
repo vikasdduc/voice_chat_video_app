@@ -23,7 +23,7 @@ class CallPage extends StatelessWidget {
         userName: username,
         callID: callID,
         // You can also use groupVideo/groupVoice/oneOnOneVoice to make more types of calls.
-        config: ZegoUIKitPrebuiltCallConfig.oneOnOneVideoCall()
+        config: ZegoUIKitPrebuiltCallConfig.groupVoiceCall()
     );
   }
 }

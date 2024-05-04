@@ -1,4 +1,4 @@
-import 'package:call_app/app/landing_page.dart';
+import 'package:call_app/app/home_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:pinput/pinput.dart';
