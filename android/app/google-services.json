@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "869533741414",
+    "project_id": "kartforyou-23dac",
+    "storage_bucket": "kartforyou-23dac.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:869533741414:android:b01445855df6c6e78358a7",
+        "android_client_info": {
+          "package_name": "com.example.call_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "869533741414-1uoa6bjpp31fae3r8elkd0khtl67kdir.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABtg5sEQHRDY2B4iuHdTnhVPkUwztzCC8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "869533741414-1uoa6bjpp31fae3r8elkd0khtl67kdir.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
