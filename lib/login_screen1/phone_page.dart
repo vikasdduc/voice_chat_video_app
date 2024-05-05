@@ -95,14 +95,14 @@ class _LoginPageState extends State<LoginPage>
               Padding(
                 padding: const EdgeInsets.all(12.0),
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Text(
                       "Welcome Back 👋",
                       style:
                       TextStyle(fontSize: 32, fontWeight: FontWeight.w700),
                     ),
-                    Text("Enter you phone number to continue."),
+                    Text("Enter your phone number to continue."),
                     SizedBox(
                       height: 20,
                     ),
