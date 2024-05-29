@@ -40,6 +40,17 @@ dependencies:
   firebase_auth: ^4.16.0
   pinput: ^2.2.9
   telephony: ^0.2.0
+  zego_uikit_prebuilt_live_audio_room: ^3.6.7
+  get: ^4.6.6
+  cloud_firestore: ^4.17.3
+  zego_uikit_prebuilt_video_conference: ^2.7.4
+  zego_uikit_signaling_plugin: ^2.7.6
+  zego_zimkit: ^1.18.1
+  flutter_riverpod: ^2.5.1
+  shared_preferences: ^2.2.3
+  google_maps_flutter: ^2.6.1
+  location: ^6.0.2
+  flutter_polyline_points: ^2.0.0
 
 dev_dependencies:
   flutter_test:
@@ -67,6 +78,8 @@ flutter:
   assets:
     - assets/splash_screen.jpg
     - assets/phone_logo.png
+    - assets/hand_check.jpg
+    - assets/call.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

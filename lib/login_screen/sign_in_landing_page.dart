@@ -1,28 +1,31 @@
-import 'package:call_app/Utils/button.dart';
-import 'package:call_app/app/home_page.dart';
+import 'package:call_app/Screens/bottom_nav_bar.dart';
 import 'package:call_app/login_screen/auth_services.dart';
+import 'package:call_app/login_screen/gmail_login.dart';
 import 'package:call_app/login_screen/phone_page.dart';
-import 'package:call_app/Utils/routing.dart';
+import 'package:call_app/services/firebase_service.dart';
 import 'package:flutter/material.dart';
 
 
-class SignInLandingPage extends StatelessWidget {
-  Future<void> _openSignup(BuildContext context) async {
+class SignInLandingPage extends StatefulWidget {
+  const SignInLandingPage({super.key});
+
+  @override
+  State<SignInLandingPage> createState() => _SignInLandingPageState();
+}
+
+class _SignInLandingPageState extends State<SignInLandingPage> {
+  Future _openSignup(BuildContext context) async {
     AuthService.isLoggedIn().then((value) {
       if (value) {
-        Navigator.pushNamed(
-            context, '/landing_home_page');
+        Navigator.pushReplacement(
+            context, MaterialPageRoute(builder: (context) => BottomHomePage() ));
       } else {
-        Navigator.pushNamed(
-            context, '/login_page');
+        Navigator.pushReplacement(
+            context, MaterialPageRoute(builder: (context) => NumberLoginPage() ));
       }
     });
-    // final navigator = Navigator.of(context);
-    // await navigator.pushNamed(
-    //   AppRoutes.loginPage
-    //   //arguments: () => navigator.pop(),
-    // );
   }
+
 
   @override
   Widget build(BuildContext context) {
@@ -34,12 +37,12 @@ class SignInLandingPage extends StatelessWidget {
       //   ),
       // ),
       body: Container(
-        padding: EdgeInsets.symmetric(horizontal: 40.0),
+        padding: const EdgeInsets.symmetric(horizontal: 40.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Spacer(),
+            const Spacer(),
             Center(child:
             ClipRRect(
               borderRadius: BorderRadius.circular(120),
@@ -51,43 +54,76 @@ class SignInLandingPage extends StatelessWidget {
               ),
             ),
               ),
-            SizedBox(height: 50),
+            const SizedBox(height: 50),
             Text(
               "Welcome to Call App ",
               style: Theme.of(context).textTheme.displayMedium,
               textAlign: TextAlign.center,
             ),
-            Spacer(),
+            const SizedBox(height: 50),
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                  onPressed: () => _openSignup(context),
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/signup_screen');
+                  },
                   style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(25.0)),
-                      backgroundColor: Colors.green[200],
+                      backgroundColor: Colors.greenAccent[200],
                       foregroundColor: Colors.black,
                       textStyle: Theme.of(context).textTheme.bodyLarge
                   ),
-                  child: Text('Sign In')
-              )
-              ),
-            SizedBox(height: 50),
-            SizedBox(
-              width: double.infinity,
-              child: ElevatedButton(
-                  onPressed: () => _openSignup(context),
-                  style: ElevatedButton.styleFrom(
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(25.0)),
-                      backgroundColor: Colors.green[200],
-                      foregroundColor: Colors.black,
-                      textStyle: Theme.of(context).textTheme.bodyLarge
-                  ),
-                  child: Text('Sign Up')
+                  child: const Text('Register')
               ),
             ),
-            Spacer()
+            const SizedBox(height: 50),
+            SizedBox(
+              width: double.infinity,
+              child: ElevatedButton(
+                  onPressed: () => _openSignup(context),
+                  style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(25.0)),
+                      backgroundColor: Colors.green[200],
+                      foregroundColor: Colors.black,
+                      textStyle: Theme.of(context).textTheme.bodyLarge
+                  ),
+                  child: const Text('Sign In With Phone Number')
+              )
+              ),
+            const SizedBox(height: 30),
+            SizedBox(
+              width: double.infinity,
+              child: ElevatedButton(
+                  onPressed: ()  => Navigator.pushReplacement(context,
+                      MaterialPageRoute(builder: (context)  => GmailLoginScreen())),
+                  style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(25.0)),
+                      backgroundColor: Colors.green[200],
+                      foregroundColor: Colors.black,
+                      textStyle: Theme.of(context).textTheme.bodyLarge
+                  ),
+                  child: const Text('Sign In With Gmail ')
+              ),
+            ),
+            // SizedBox(height: 30),
+            // SizedBox(
+            //   width: double.infinity,
+            //   child: ElevatedButton(
+            //       onPressed: ()  => Navigator.pushNamed(context, '/bottom_home_page'),
+            //       style: ElevatedButton.styleFrom(
+            //           shape: RoundedRectangleBorder(
+            //               borderRadius: BorderRadius.circular(20.0)),
+            //           backgroundColor: Colors.amberAccent[200],
+            //           foregroundColor: Colors.black,
+            //           textStyle: Theme.of(context).textTheme.bodyLarge
+            //       ),
+            //       child: const Text('bottom bar ')
+            //   ),
+            // ),
+            const Spacer()
           ],
         ),
       ),

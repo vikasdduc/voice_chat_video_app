@@ -1,9 +1,12 @@
+import 'package:call_app/firebase_options.dart';
+import 'package:call_app/model/user_model/user_model.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class AuthService {
   static final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
-
   static String verifyId = "";
   // to sent and otp to user
   static Future sentOtp({
@@ -13,7 +16,7 @@ class AuthService {
   }) async {
     await _firebaseAuth
         .verifyPhoneNumber(
-      timeout: Duration(seconds: 30),
+      timeout: const Duration(seconds: 30),
       phoneNumber: "+91$phone",
       verificationCompleted: (phoneAuthCredential) async {
         return;
@@ -64,4 +67,6 @@ class AuthService {
     var user = _firebaseAuth.currentUser;
     return user != null;
   }
+
+
 }
