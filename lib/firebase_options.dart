@@ -44,40 +44,40 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyClAhBj_SXvwq8w3FmGjcebg68b2eoPgjw',
-    appId: '1:869533741414:web:52f8965149e9f6f98358a7',
-    messagingSenderId: '869533741414',
-    projectId: 'kartforyou-23dac',
-    authDomain: 'kartforyou-23dac.firebaseapp.com',
-    storageBucket: 'kartforyou-23dac.appspot.com',
-    measurementId: 'G-3TF0K68PDP',
+    apiKey: 'AI2eoPgjw',
+    appId: '1:869533741414:web:58a7',
+    messagingSenderId: '3741414',
+    projectId: 'kartac',
+    authDomain: 'kartfoseapp.com',
+    storageBucket: 'kartforot.com',
+    measurementId: 'GPDP',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyABtg5sEQHRDY2B4iuHdTnhVPkUwztzCC8',
-    appId: '1:869533741414:android:b01445855df6c6e78358a7',
-    messagingSenderId: '869533741414',
-    projectId: 'kartforyou-23dac',
-    storageBucket: 'kartforyou-23dac.appspot.com',
+    apiKey: 'AIztzCC8',
+    appId: '1:869533741414:android:be78358a7',
+    messagingSenderId: '8641414',
+    projectId: 'kau-23dac',
+    storageBucket: 'kartforyou-2spot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyC9hIJmggEtLzmNiM_RVJTdcgy_4AqkpUo',
-    appId: '1:869533741414:ios:73e211f014c38db08358a7',
-    messagingSenderId: '869533741414',
-    projectId: 'kartforyou-23dac',
-    storageBucket: 'kartforyou-23dac.appspot.com',
-    iosClientId: '869533741414-n18nrgho0cb1j3rkca24dmlssurvqeph.apps.googleusercontent.com',
-    iosBundleId: 'com.example.callApp',
+    apiKey: 'AIzaSyC9_4AqkpUo',
+    appId: '1:8695337408358a7',
+    messagingSenderId: '869414',
+    projectId: 'kaac',
+    storageBucket: 'kartfor.com',
+    iosClientId: '86953t.com',
+    iosBundleId: 'com.lApp',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyC9hIJmggEtLzmNiM_RVJTdcgy_4AqkpUo',
-    appId: '1:869533741414:ios:37337c1ea82f1abf8358a7',
-    messagingSenderId: '869533741414',
-    projectId: 'kartforyou-23dac',
-    storageBucket: 'kartforyou-23dac.appspot.com',
-    iosClientId: '869533741414-ocs06mg3g3pf0b84fvqdag2s4imsns5a.apps.googleusercontent.com',
-    iosBundleId: 'com.example.callApp.RunnerTests',
+    apiKey: 'AIzaSyCAqkpUo',
+    appId: '1:858a7',
+    messagingSenderId: '81414',
+    projectId: 'ac',
+    storageBucket: 'karot.com',
+    iosClientId: '869533741t.com',
+    iosBundleId: 'coests',
   );
 }
